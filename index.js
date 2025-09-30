@@ -21,6 +21,16 @@ app.get('/youtube', (req, res) => {
   res.send("<h2> mr.golbel360</h2>") 
 })
 
-app.listen(Proces.env.PORT, () => {
-  console.log(`Example app listening on port ${port}`)
+const githubData = {
+  name : "shammi sharma",
+  repo :"code-backend-shami",
+};
+
+app.get('/github', (req, res) => {
+  res.json(githubData) 
+})
+
+
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Example app listening on port ${process.env.PORT || 3000}')
 })
